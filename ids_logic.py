@@ -1,7 +1,7 @@
 from scapy.all import *
 import logging
 
-# Configure logging
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(message)s',
@@ -11,8 +11,8 @@ logging.basicConfig(
     ]
 )
 
-# List of suspicious IP addresses
-suspicious_ips = ['192.168.10.66']
+
+suspicious_ips = ['{Enter sources IP address']
 
 def check_packet(packet, update_gui_callback):
     if IP in packet:
