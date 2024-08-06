@@ -1,4 +1,4 @@
-In kali terminal open via sudo gui_ids.py.
+In kali terminal open via sudo python3 gui_ids.py.
 
 
 
