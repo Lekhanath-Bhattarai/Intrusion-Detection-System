@@ -16,7 +16,9 @@ def start_sniffing_thread():
     global stop_event
     stop_event.clear()  
     threading.Thread(target=ids_logic.start_sniffing, args=(update_gui, stop_event)).start()
-
+def start_sniffing():
+    stop_event.clear()  
+    ids_logic.start_sniffing(update_gui, stop_event)    
 
 def stop_sniffing():
     stop_event.set()
