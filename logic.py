@@ -29,3 +29,10 @@ def start_sniffing(update_gui_callback, stop_event):
     while not stop_event.is_set():
         sniff(prn=lambda pkt: check_packet(pkt, update_gui_callback), store=0, timeout=1)
     update_gui_callback("Sniffing stopped...")
+
+
+def start_sniffing_thread(update_gui_callback, stop_event):
+    update_gui_callback("Sniffing started...")
+    while not stop_event.is_set():
+        sniff(prn=lambda pkt: check_packet(pkt, update_gui_callback), store=0, timeout=1)
+    update_gui_callback("Sniffing stopped...")
