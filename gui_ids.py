@@ -6,7 +6,7 @@ import threading
 import time
 stop_event = threading.Event()
 
-def update_gui(message):
+def update_gui(message)
     log_display.config(state=tk.NORMAL)
     log_display.insert(tk.END, message + "\n\n")
     log_display.config(state=tk.DISABLED)
